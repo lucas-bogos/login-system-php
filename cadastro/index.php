@@ -15,24 +15,23 @@
         <legend>Cadastro</legend>
         <label for="name">Nome</label>
         <div>
-          <input type="text" name="name" id="name">
+          <input type="text" name="name" id="name" required>
         </div>
         <label for="name">Email</label>
         <div>
-          <input type="email" name="email" id="email">
+          <input type="email" name="email" id="email" required>
         </div>
         <label for="password">Senha</label>
         <div>
-          <input type="password" name="password" id="password">
+          <input type="password" name="password" id="password" required>
         </div>
         <label for="check_password">Confirme a senha</label>
         <div>
-          <input type="password" name="check_password" id="check_password">
+          <input type="password" name="check_password" id="check_password" required>
         </div>
         <button type="submit">Registrar</button>
       </fieldset>
     </form>
   </div>
 </body>
-
 </html>

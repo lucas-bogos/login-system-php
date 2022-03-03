@@ -10,17 +10,9 @@
 </head>
 <body>
   <?php
-  $host = getenv("HOST");
-  $username = getenv("USERNAME");
-  $password = getenv("PASSWORD");
-  $db_name = getenv("DATABASE_NAME");
+  require "connection.php";
 
-  $connection = new \MySQLi($host, $username, $password, $db_name);
-
-  if ($connection->connect_error) {
-    die("<p>Banco de dados desconectado! <strong>Erro</strong>: "
-      . $connection->connect_error . "</p>");
-  }
+  $connection = conn();
 
   if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $email = isset($_POST["email"])
